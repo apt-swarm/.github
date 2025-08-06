@@ -1,0 +1,48 @@
+name: Bug report
+description: File a bug report for the package.
+title: "[Bug] "
+labels: ["bug", "triage needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the filing the bug!
+  - type: textarea
+    id: details
+    attributes:
+      label: Bug details
+      description: What happened with the bug?
+      placeholder: I was doing this, then this happened...
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of the package are you running?
+      placeholder: 1.0.0
+  - type: dropdown
+    id: distro
+    attributes:
+      label: Which distro are you using the package on?
+      multiple: false
+      options:
+        - Debian
+        - Ubuntu
+        - Other
+  - type: input
+    id: os-distro
+    attributes:
+      label: Other only
+      description: If you chose Other for the dropdown, which distro are you using?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log outputs
+      description: If log outputs are given, please paste it here. Code formatting won't be necessary as it will automatically be rendered to shell.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Final checklist
+      options:
+        - label: I have checked for duplicate issues/discussions about this.
+          required: true
